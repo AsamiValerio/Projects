@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "Goldman";
+  src: url(/assets/fonts/Goldman-Regular.ttf);
+}
+
+:root {
+  --color1: rgb(19, 17, 17);
+  --color2: rgb(248, 248, 248);
+  --color3: rgba(49, 49, 175, 0.767);
+  --color4: rgba(206, 46, 46, 0.87);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Goldman";
+}
+
+i {
+  text-decoration: none;
+}
+
+body {
+  background: var(--color1);
+}
+
+/* ****** NAV ****** */
+
+nav {
+  background: var(--color1);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+}
+
+nav li {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color2);
+  position: relative;
+}
+
+nav li:nth-child(1):before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: url(/assets/img/mebanner3.jpg) center/cover no-repeat;
+  position: absolute;
+  bottom: 30px;
+}
+
+li:hover {
+  color: var(--color4);
+}
+
+/* ***** HEADER ***** */
+
+header {
+  height: 95vh;
+  margin-bottom: 1px;
+}
+
+header::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--color2);
+  position: absolute;
+  opacity: 0.2;
+}
+
+.header-container {
+  height: 100%;
+  /* border: 1px solid rgba(172, 164, 164, 0.295); */
+}
+
+.img-banner {
+  background: url(/assets/img/MEJohn&Jane.jpg) center/cover no-repeat;
+  height: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+#logo,
+.header-container-text {
+  z-index: 1;
+  position: absolute;
+}
+
+#logo {
+  background: url(/assets/img/MassEffectTitle.png) no-repeat;
+  height: 200px;
+  width: 680px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 69%;
+}
+
+.header-container-text {
+  color: var(--color2);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 31%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container-text h2 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  background: var(--color4);
+  padding: 10px;
+  max-width: 500px;
+  width: 500px;
+  text-align: center;
+}
+
+.header-container-text p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: center;
+  max-width: 500px;
+  width: 500px;
+  background: rgba(37, 34, 34, 0.514);
+  padding: 5px 10px;
+}
+
+/* ***** SECTION IMAGE ***** */
+
+.img-part {
+  height: 94vh;
+  background: url(/assets/img/Terra_Nova.jpg) center/cover no-repeat fixed;
+  position: relative;
+  overflow: hidden;
+  margin: 0 35px;
+  border: 1px solid rgba(170, 164, 164, 0.185);
+}
+
+.img-part-text h3 {
+  text-align: center;
+  color: var(--color2);
+  padding-top: 25px;
+  font-size: 2.4rem;
+  font-weight: 100;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.img-part1 {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 25px;
+  position: relative;
+}
+
+#img-left {
+  background: url(/assets/img/shepar13.png) center/cover no-repeat;
+  margin: 0 15%;
+  border: 5px solid var(--color2);
+  box-shadow: 0px 0px 8px 0px whitesmoke;
+  transition: 0.3s;
+}
+
+#img-left:hover {
+  box-shadow: 0px 0px 17.5px 0px whitesmoke;
+}
+
+#img-left::before {
+  content: "";
+  width: 10%;
+  height: 0.1px;
+  background: var(--color2);
+  color: var(--color2);
+  position: absolute;
+  opacity: 0.14;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 8px 7px whitesmoke;
+}
+
+#img-left::after {
+  content: "";
+  width: 16%;
+  height: 0.1px;
+  background: var(--color2);
+  color: var(--color2);
+  position: absolute;
+  opacity: 0.12;
+  bottom: 0;
+  left: 42%;
+  box-shadow: 0px 0px 8px 7px whitesmoke;
+}
+
+.img-part1 div {
+  color: var(--color2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.9rem;
+  margin-right: 150px;
+}
+
+.img-part1 a {
+  text-decoration: none;
+  color: var(--color2);
+  display: flex;
+  gap: 25px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.img-part2 {
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.img-part2 div {
+  color: var(--color2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.9rem;
+  margin-left: 150px;
+}
+
+.img-part2 a {
+  text-decoration: none;
+  color: var(--color2);
+  display: flex;
+  gap: 25px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#img-right {
+  background: url(/assets/img/wrex2.jpg) center/cover no-repeat;
+  margin: 0 15%;
+  border: 5px solid var(--color2);
+  box-shadow: 0px 0px 8px 0px whitesmoke;
+  transition: 0.3s;
+}
+
+#img-right:hover {
+  box-shadow: 0px 0px 17.5px 0px whitesmoke;
+}
+
+#img-right::after {
+  content: "";
+  width: 10%;
+  height: 0.1px;
+  background: var(--color2);
+  color: var(--color2);
+  position: absolute;
+  opacity: 0.14;
+  right: -15px;
+  bottom: 33px;
+  box-shadow: 0px 0px 8px 7px whitesmoke;
+}
+
+/* ***** FOOTER ***** */
+
+footer {
+  height: 6vh;
+  background: var(--color1);
+  position: relative;
+}
+
+/* footer::before {
+  content: "";
+  width: 96%;
+  height: 1px;
+  background: var(--color2);
+  position: absolute;
+  translate: 2%;
+  opacity: 0.2;
+} */
+
+.contacts {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 20%;
+  max-width: 600px;
+}
+
+.contacts-container i {
+  border: 2px solid var(--color2);
+  color: var(--color2);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contacts-container i:hover {
+  box-shadow: 0px 0px 9px 0px whitesmoke;
+}
